@@ -1,3 +1,4 @@
+using ProjetoEmTresCamadas.Pizzaria.DAO;
 using ProjetoEmTresCamadas.Pizzaria.RegraDeNegocio.Serviços;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<PizzaService>();
+builder.Services.AddScoped<IClienteDao, ClienteDao>();
+builder.Services.AddScoped<ClienteService>();
 
 var app = builder.Build();
 
