@@ -2,7 +2,6 @@
 using ProjetoEmTresCamadas.Pizzaria.DAO.ValueObjects;
 using ProjetoEmTresCamadas.Pizzaria.RegraDeNegocio.Entidades;
 using ProjetoEmTresCamadas.Pizzaria.RegraDeNegocio.Regras;
-using System.Runtime.CompilerServices;
 
 namespace ProjetoEmTresCamadas.Pizzaria.RegraDeNegocio.Serviços;
 
@@ -61,13 +60,8 @@ public class PizzaService :
         return objeto;
     }
 
-    public async Pizza DeletarAsync(Pizza objeto)
+    public async Task Deletar(int ID)
     {
-        PizzaVo pizzaVo = objeto.ToPizzaVo();
-        objeto.Id = PizzaDao.Deletar(pizzaVo);
+        await PizzaDao.DeletarRegistro(ID);
     }
-}
-
-internal interface IDeletar<T>
-{
 }

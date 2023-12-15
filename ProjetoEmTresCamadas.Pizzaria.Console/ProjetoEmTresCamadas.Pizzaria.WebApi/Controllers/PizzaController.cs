@@ -32,19 +32,16 @@ namespace ProjetoEmTresCamadas.Pizzaria.WebApi.Controllers
         }
 
         [HttpPut]
-        public Pizza AtualizarPizza(Pizza pizza)
+        public async Task<Pizza> AtualizarPizza(Pizza pizza)
         {
-            pizza = _pizzaService.AtualizarAsync(pizza).Result;
-
-            return pizza;
+            return await _pizzaService.AtualizarAsync(pizza); 
         }
 
         [HttpDelete]
-        public Pizza DeletarPizza(Pizza pizza)
+        public async Task DeletePizza(int ID)
         {
-            pizza = _pizzaService.Deletar(pizza);
-            return pizza;
+            await _pizzaService.Deletar(ID);
         }
-
+    
     }
 }
