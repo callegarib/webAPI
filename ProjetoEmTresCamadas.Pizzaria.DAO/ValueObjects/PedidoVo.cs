@@ -4,18 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoEmTresCamadas.Pizzaria.RegraDeNegocio.Entidades
+namespace ProjetoEmTresCamadas.Pizzaria.DAO.ValueObjects
 {
-    public class Pedido : EntidadeBase
+    public class PedidoVo : EntidadeBaseVo
     {
-        public int ClienteId { get; set; }
-        public int PizzaId { get; set; }
         public string NomeCliente { get; set; }
         public string SaborPizza { get; set; }
         public DateTime HorarioSolicitacao { get; set; }
         public DateTime HorarioFinalizacaoPreparacao { get; set; }
         public DateTime HorarioSaidaEntrega { get; set; }
-        public DateTime HorarioFinalizacaoEntrega { get; set; }
-       
+        public DateTime HorarioFinalizacaoEntrega { get; set; }   
+      
     }
 }

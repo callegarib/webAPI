@@ -16,8 +16,7 @@ namespace ProjetoEmTresCamadas.Pizzaria.RegraDeNegocio.Entidades
             return new ClienteVo
             {
                 Id = this.Id,
-                Nome = this.Nome,
-                // Mapear outros atributos, se necessário
+                Nome = this.Nome             
             };
         }
     }    

@@ -13,6 +13,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<PizzaService>();
 builder.Services.AddScoped<IClienteDao, ClienteDao>();
 builder.Services.AddScoped<ClienteService>();
+builder.Services.AddScoped<IPedidoDao, PedidoDao>(); 
+builder.Services.AddScoped<PedidoService>();
 
 var app = builder.Build();
 

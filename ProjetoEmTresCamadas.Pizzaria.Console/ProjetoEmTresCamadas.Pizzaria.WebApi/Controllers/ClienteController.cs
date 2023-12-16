@@ -42,18 +42,6 @@ namespace ProjetoEmTresCamadas.Pizzaria.WebApi.Controllers
             {
                 await _clienteService.Deletar(id);
             }
-
-            //[HttpGet("{id}/historico")]
-            //public ActionResult<IEnumerable<Acao>> ObterHistoricoCliente(int id)
-            //{
-            //    var historico = _clienteService.ObterHistoricoAcoesCliente(id);
-
-            //    if (historico == null || historico.Count == 0)
-            //    {
-            //        return NotFound("Nenhum histórico de ações encontrado para este cliente.");
-            //    }
-
-            ////    return Ok(historico);
-            //}
+            
         }
  }

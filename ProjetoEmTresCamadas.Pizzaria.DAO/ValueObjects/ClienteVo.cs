@@ -8,7 +8,6 @@ namespace ProjetoEmTresCamadas.Pizzaria.DAO.ValueObjects
 {
     public class ClienteVo : EntidadeBaseVo
     {
-        public string Nome { get; set; }
-        // Outros atributos do cliente, se houver...
+        public string Nome { get; set; }        
     }
 }

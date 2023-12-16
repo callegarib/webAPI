@@ -8,7 +8,7 @@ namespace ProjetoEmTresCamadas.Pizzaria.DAO
 {
     public interface IClienteDao : IDao<ClienteVo>
     {
-        // Métodos específicos do ClienteDao, se houver necessidade
+        
     }
 
     public class ClienteDao : BaseDao<ClienteVo>, IClienteDao
@@ -18,7 +18,7 @@ namespace ProjetoEmTresCamadas.Pizzaria.DAO
         private const string TABELA_CLIENTE = @$"CREATE TABLE IF NOT EXISTS {TABELA_CLIENTE_NOME}
                 (
                     ID INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Nome VARCHAR(50) not null                    
+                    Nome VARCHAR(250) not null                    
                 )";
 
         private const string INSERIR_CLIENTE = @$"
